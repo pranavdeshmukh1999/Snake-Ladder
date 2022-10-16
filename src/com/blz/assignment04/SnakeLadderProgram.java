@@ -57,6 +57,74 @@ public class SnakeLadderProgram {
 		count++;
 
 		System.err.println("Toatl Count= " + count);
+
+//				UC4=Repeat till Winning Position
+
+		Random rn = new Random();
+
+		int dice1 = rn.nextInt(6) + 1;
+
+		System.out.println("dice= " + dice1);
+
+		int OptionCheck1 = rn.nextInt(3);
+
+		System.out.println("OptionCheck=" + OptionCheck1);
+
+		if (OptionCheck1 == ladder) {
+
+			while (noplay < 100) {
+
+				Random rn1 = new Random();
+
+				int dice11 = rn1.nextInt(6) + 1;
+
+				System.out.println("dice= " + dice11);
+
+				int OptionCheck = rn1.nextInt(3);
+
+				System.out.println("OptionCheck=" + OptionCheck);
+
+				if ((OptionCheck == ladder) && (noplay + dice11) < 100) {
+
+					System.out.println("ladder=");
+
+					noplay = noplay + dice11;
+
+					System.out.println("Position= " + noplay);
+
+				} else if (OptionCheck == snake) {
+
+					System.out.println("snake=");
+
+					noplay = noplay - dice11;
+
+					System.out.println("Position= " + noplay);
+				} else {
+
+					System.out.println("Noplay");
+
+				}
+				if (noplay < 0) {
+
+					noplay = 0;
+					System.out.println("Position= " + noplay);
+
+				} else if (OptionCheck1 == snake) {
+
+					System.out.println("snake=");
+					noplay = noplay - dice11;
+
+				} else {
+
+					System.out.println("Noplay");
+				}
+				if (noplay < 0) {
+
+					noplay = 0;
+
+					System.out.println("Position= " + noplay);
+				}
+			}
+		}
 	}
 }
-
