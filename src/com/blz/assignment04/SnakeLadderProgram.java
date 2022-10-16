@@ -123,6 +123,47 @@ public class SnakeLadderProgram {
 					noplay = 0;
 
 					System.out.println("Position= " + noplay);
+					
+					
+					
+//										 UC - 5 , 6 & 7
+					
+					
+					while (position < 100) {
+						Random ran = new Random();
+						System.out.println("dice: " + dice);
+
+						System.out.println("dice: " + dice1);
+
+						int optionCheck1 = ran.nextInt(3);
+						System.out.println("optionCheck: " + optionCheck1);
+
+						if ((optionCheck1 == count) && (position + dice) <= 100) {
+							System.out.println("optionCheck: " + optionCheck1);
+
+							if ((optionCheck1 == count) && (position + dice) <= 100) {
+								System.out.println("Ladder");
+								position = position + dice;
+							} else if (optionCheck1 == snake) {
+
+								System.out.println("Snake");
+								position = position - dice;
+							}
+
+							else {
+								System.out.println("Noplay");
+							}
+							if (position < 0) {
+								position = 0;
+							}
+							if (position < 0) {
+								position = 0;
+							}
+							System.out.println("position: " + position);
+							System.out.println("position: " + position);
+						}
+					}
+			
 				}
 			}
 		}
